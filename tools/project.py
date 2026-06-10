@@ -32,8 +32,14 @@ from typing import (
     cast,
 )
 
-from . import ninja_syntax
-from .ninja_syntax import serialize_path
+try:
+    from . import ninja_syntax
+except ImportError:
+    import ninja_syntax
+try:
+    from .ninja_syntax import serialize_path
+except ImportError:
+    from ninja_syntax import serialize_path
 
 if sys.platform == "cygwin":
     sys.exit(
@@ -791,6 +797,17 @@ def generate_build_ninja(
         )
         n.newline()
 
+        # Precompiled CRT objects: instead of compiling, copy an already-patched
+        # static-lib .obj (extracted from LIBCMT/LIBCPMT) to the build output.
+        # This restores "libcmt linking" coverage for CRT functions.
+        n.comment("Copy precompiled object (libcmt linking)")
+        n.rule(
+            name="copy_obj",
+            command='$python -c "import shutil,sys; shutil.copyfile(sys.argv[1], sys.argv[2])" $in $out',
+            description="COPY $out",
+        )
+        n.newline()
+
         if gnu_as_cmd:
             n.comment("Assemble asm")
             n.rule(
@@ -1124,6 +1141,22 @@ def generate_build_ninja(
                 return obj.src_obj_path
             source_added.add(obj.src_obj_path)
 
+            # Precompiled object (libcmt linking): copy the patched .obj directly
+            # instead of compiling. No ctx/decompctx step (there is no source).
+            if str(src_path).lower().endswith(".obj"):
+                lib_name = obj.options["lib"]
+                n.comment(f"{obj.name}: {lib_name} (precompiled, linked {obj.completed})")
+                n.build(
+                    outputs=obj.src_obj_path,
+                    rule="copy_obj",
+                    inputs=src_path,
+                    order_only="pre-compile",
+                )
+                n.newline()
+                if obj.options["add_to_all"]:
+                    source_inputs.append(obj.src_obj_path)
+                return obj.src_obj_path
+
             cflags = obj.options["cflags"]
             extra_cflags = obj.options["extra_cflags"]
             all_cflags = cflags + extra_cflags
@@ -1286,7 +1319,10 @@ def generate_build_ninja(
             built_obj_path: Optional[Path] = None
             if obj.src_path is not None and obj.src_path.exists():
                 check_path_case(obj.src_path)
-                if file_is_c_cpp(obj.src_path):
+                if str(obj.src_path).lower().endswith(".obj"):
+                    # Precompiled object (libcmt linking): copy instead of compile
+                    built_obj_path = c_build(obj, obj.src_path)
+                elif file_is_c_cpp(obj.src_path):
                     # Add C/C++ build rule
                     built_obj_path = c_build(obj, obj.src_path)
                 elif file_is_asm(obj.src_path):
@@ -1692,7 +1728,7 @@ def generate_build_ninja(
     n.comment(split_desc)
     n.rule(
         name="split",
-        command=f"{dtk} {split_kind} split --no-update $in $out_dir",
+        command=f"{dtk} {split_kind} split $in $out_dir",
         description="SPLIT $in",
         depfile="$out_dir/dep",
         deps="gcc",
@@ -1905,7 +1941,7 @@ def generate_objdiff_config(
                 "c_flags": cflags_str,
                 "preset_id": obj.options["scratch_preset_id"],
             }
-            if src_exists:
+            if src_exists and not str(obj.src_path).lower().endswith(".obj"):
                 unit_config["scratch"].update(
                     {
                         "ctx_path": obj.ctx_path,

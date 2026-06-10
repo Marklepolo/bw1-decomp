@@ -14,173 +14,671 @@ Black/Abode.cpp:
 	.rdata$r    start:0x009A62D8 end:0x009A6570
 	.data       start:0x009C7E80 end:0x009C8078
 
-Black/Villager.cpp:
-	.text       start:0x0074F7D0 end:0x00756C80
-	.rdata      start:0x0099A1E4 end:0x0099A924
-	.rdata$r    start:0x009AD530 end:0x009AD57C
-	.data       start:0x00C234E0 end:0x00C235C0
-	.bss        start:0x00DA6BC0 end:0x00DB9DC0
+Black/Bank_409940.cpp:
+	.text       start:0x00409940 end:0x00409960
 
-Black/VillagerCheck.cpp:
-	.text       start:0x00756C80 end:0x00757860
-	.rdata      start:0x0099A924 end:0x0099A930
-	.bss        start:0x00DB9DC0 end:0x00DB9DD0
+Black/Bank_409c50.cpp:
+	.text       start:0x00409C50 end:0x00409C70
 
-Black/VillagerChild.cpp:
-	.text       start:0x00757860 end:0x00758120
-	.rdata      start:0x0099A930 end:0x0099A940
-	.data       start:0x00C236E0 end:0x00C23704
-	.bss        start:0x00DB9DD0 end:0x00DB9DD8
+Black/Tile_40b4a0.cpp:
+	.text       start:0x0040B4A0 end:0x0040B4C0
 
-Black/VillagerCivic.cpp:
-	.text       start:0x00758120 end:0x00759810
-	.rdata      start:0x0099A940 end:0x0099A950
-	.data       start:0x00C23704 end:0x00C2372C
-	.bss        start:0x00DB9DD8 end:0x00DB9DF4
+Black/Bank_40c560.cpp:
+	.text       start:0x0040C560 end:0x00411090
 
-Black/VillagerDance.cpp:
-	.text       start:0x00759810 end:0x00759B90
-	.rdata      start:0x0099A950 end:0x0099A958
-	.bss        start:0x00DB9DF4 end:0x00DB9DFC
+Black/Bank_411670.cpp:
+	.text       start:0x00411670 end:0x00411690
 
-Black/VillagerFarmer.cpp:
-	.text       start:0x00759B90 end:0x0075A370
-	.rdata      start:0x0099A958 end:0x0099A960
-	.bss        start:0x00DB9DFC end:0x00DB9E00
+Black/Bank_414120.cpp:
+	.text       start:0x00414120 end:0x00414140
 
-Black/VillagerFireman.cpp:
-	.text       start:0x0075A370 end:0x0075B460
-	.rdata      start:0x0099A960 end:0x0099A970
-	.data       start:0x00C2372C end:0x00C23750
-	.bss        start:0x00DB9E00 end:0x00DB9E04
+Black/Bank_416da0.cpp:
+	.text       start:0x00416DA0 end:0x00419B60
 
-Black/VillagerFisherman.cpp:
-	.text       start:0x0075B460 end:0x0075B8E0
-	.rdata      start:0x0099A970 end:0x0099A978
-	.data       start:0x00C23750 end:0x00C23778
-	.bss        start:0x00DB9E04 end:0x00DB9E08
+Black/Bank_41a2b0.cpp:
+	.text       start:0x0041A2B0 end:0x004221D0
 
-Black/VillagerFood.cpp:
-	.text       start:0x0075B8E0 end:0x0075C100
-	.rdata      start:0x0099A978 end:0x0099A980
-	.bss        start:0x00DB9E08 end:0x00DB9E0C
+Black/Gen_4221d0.cpp:
+	.text       start:0x004221D0 end:0x004221E0
 
-Black/VillagerFootball.cpp:
-	.text       start:0x0075C100 end:0x0075F440
-	.rdata      start:0x0099A980 end:0x0099A98C
-	.data       start:0x00C23778 end:0x00C24464
-	.bss        start:0x00DB9E0C end:0x00DB9E14
+Black/Bank_422e70.cpp:
+	.text       start:0x00422E70 end:0x00422E90
 
-Black/VillagerForester.cpp:
-	.text       start:0x0075F440 end:0x0075FE40
-	.rdata      start:0x0099A98C end:0x0099A994
-	.bss        start:0x00DB9E14 end:0x00DB9E18
+Black/Bank_424780.cpp:
+	.text       start:0x00424780 end:0x00425C70
 
-Black/VillagerHome.cpp:
-	.text       start:0x0075FE40 end:0x00761bd0
-	.rdata      start:0x0099A994 end:0x0099A99C
-	.data       start:0x00C24464 end:0x00C2450C
-	.bss        start:0x00DB9E18 end:0x00DB9E1C
+Black/Gen_425d40.cpp:
+	.text       start:0x00425D40 end:0x00425D50
 
-Black/VillagerHousewife.cpp:
-	.text       start:0x00761bd0 end:0x00762680
-	.rdata      start:0x0099A99C end:0x0099A9AC
-	.data       start:0x00C2450C end:0x00C24534
-	.bss        start:0x00DB9E1C end:0x00DB9E20
+Black/Gen_425d50.cpp:
+	.text       start:0x00425D50 end:0x00425D60
 
-Black/VillagerLeader.cpp:
-	.text       start:0x00762680 end:0x007626F0
-	.rdata      start:0x0099A9AC end:0x0099A9B8
-	.bss        start:0x00DB9E20 end:0x00DB9E24
+Black/Gen_425d60.cpp:
+	.text       start:0x00425D60 end:0x00425D70
 
-Black/villagernames.cpp:
-	.text       start:0x007626F0 end:0x00763080
-	.rdata      start:0x0099A9B8 end:0x0099A9C0
-	.data       start:0x00C24534 end:0x00C24574
-	.bss        start:0x00DB9E24 end:0x00DB9E2C
+Black/Gen_425d70.cpp:
+	.text       start:0x00425D70 end:0x00425D80
 
-Black/VillagerPlaytime.cpp:
-	.text       start:0x00763080 end:0x00763310
-	.rdata      start:0x0099A9C0 end:0x0099A9CC
-	.bss        start:0x00DB9E2C end:0x00DB9E30
+Black/Bank_426f80.cpp:
+	.text       start:0x00426F80 end:0x00429340
 
-Black/VillagerReaction.cpp:
-	.text       start:0x00763310 end:0x007675B0
-	.rdata      start:0x0099A9CC end:0x0099A9E0
-	.data       start:0x00C24574 end:0x00C245B0
-	.bss        start:0x00DB9E30 end:0x00DB9E38
+Black/Tile_42b370.cpp:
+	.text       start:0x0042B370 end:0x0042B400
 
-Black/VillagerReactionToCreature.cpp:
-	.text       start:0x007675B0 end:0x007685B0
-	.rdata      start:0x0099A9E0 end:0x0099A9F8
-	.data       start:0x00C245B0 end:0x00C245E0
-	.bss        start:0x00DB9E38 end:0x00DB9E44
+Black/Tile_42fd40.cpp:
+	.text       start:0x0042FD40 end:0x0042FD60
 
-Black/VillagerScript.cpp:
-	.text       start:0x007685B0 end:0x00768B80
-	.rdata      start:0x0099A9F8 end:0x0099AA04
-	.data       start:0x00C245E0 end:0x00C24608
-	.bss        start:0x00DB9E44 end:0x00DB9E50
+Black/AsmBank_434040.cpp:
+	.text       start:0x00434040 end:0x0043F980
 
-Black/VillagerShepherd.cpp:
-	.text       start:0x00768B80 end:0x00769470
-	.rdata      start:0x0099AA04 end:0x0099AA0C
-	.bss        start:0x00DB9E50 end:0x00DB9E58
+Black/Bank_4409f0.cpp:
+	.text       start:0x004409F0 end:0x00441B60
 
-Black/VillagerStates.cpp:
-	.text       start:0x00769470 end:0x0076B920
-	.rdata      start:0x0099AA0C end:0x0099AA50
-	.data       start:0x00C24608 end:0x00C24658
-	.bss        start:0x00DB9E58 end:0x00DCB160
+Black/Tile_44a290.cpp:
+	.text       start:0x0044A290 end:0x0044A2A0
 
-Black/VillagerTrader.cpp:
-	.text       start:0x0076B920 end:0x0076B9E0
-	.rdata      start:0x0099AA50 end:0x0099AA5C
-	.bss        start:0x00DCB160 end:0x00DCB16C
+Black/Tile_44a2b0.cpp:
+	.text       start:0x0044A2B0 end:0x0044A2C0
 
-Black/VillagerWorshipper.cpp:
-	.text       start:0x0076B9E0 end:0x0076CED0
-	.rdata      start:0x0099AA5C end:0x0099AA64
-	.bss        start:0x00DCB16C end:0x00DCB174
+Black/Bank_44a2d0.cpp:
+	.text       start:0x0044A2D0 end:0x0044A2E0
 
-zlib/deflate.c:
-	.text       start:0x007BF210 end:0x007C08D0
-	.rdata      start:0x0099F878 end:0x0099F928
-	.data       start:0x00C2BF5C end:0x00C2BF60
+Black/Tile_44a2e0.cpp:
+	.text       start:0x0044A2E0 end:0x0044A2F0
 
-zlib/inflate.c:
-	.text       start:0x007C08D0 end:0x007C1060
-	.rdata      start:0x0099F928 end:0x0099F92C
+Black/Tile_44a390.cpp:
+	.text       start:0x0044A390 end:0x0044A3A0
 
-zlib/zutil.c:
-	.text       start:0x007C1060 end:0x007C10C0
-	.data       start:0x00C2BF60 end:0x00C2C068
+Black/Tile_462980.cpp:
+	.text       start:0x00462980 end:0x00462A50
 
-zlib/adler32.c:
-	.text       start:0x007C10C0 end:0x007C11F0
+Black/Bank_462a50.cpp:
+	.text       start:0x00462A50 end:0x0046B920
 
-zlib/trees.c:
-	.text       start:0x007C11F0 end:0x007C2E30
-	.rdata      start:0x0099F92C end:0x009A035C
-	.data       start:0x00C2C068 end:0x00C2C0AC
+Black/Tile_46be80.cpp:
+	.text       start:0x0046BE80 end:0x0046BF20
 
-zlib/infblock.c:
-	.text       start:0x007C2E30 end:0x007C3CE0
-	.rdata      start:0x009A035C end:0x009A03A8
-	.data       start:0x00C2C0AC end:0x00C2C120
+Black/Tile_472c10.cpp:
+	.text       start:0x00472C10 end:0x00472C80
 
-zlib/infcodes.c:
-	.text       start:0x007C3CE0 end:0x007C44F0
-	.data       start:0x00C2C120 end:0x00C2C158
+Black/Bank_472c80.cpp:
+	.text       start:0x00472C80 end:0x004753D0
 
-zlib/inftrees.c:
-	.text       start:0x007C44F0 end:0x007C4C30
-	.rdata      start:0x009A03A8 end:0x009A05C0
-	.data       start:0x00C2C158 end:0x00C2D350
+Black/Bank_476dc0.cpp:
+	.text       start:0x00476DC0 end:0x00477E30
 
-zlib/infutil.c:
-	.text       start:0x007C4C30 end:0x007C4D70
-	.data       start:0x00C2D350 end:0x00C2D394
+Black/Bank_477ee0.cpp:
+	.text       start:0x00477EE0 end:0x0047D2F0
 
-zlib/inffast.c:
-	.text       start:0x007C4D70 end:0x007C5100
+Black/Bank_47d810.cpp:
+	.text       start:0x0047D810 end:0x0047D950
+
+Black/Gen_4842b0.cpp:
+	.text       start:0x004842B0 end:0x004842E0
+
+Black/Gen_48b780.cpp:
+	.text       start:0x0048B780 end:0x0048B790
+
+Black/Tile_491750.cpp:
+	.text       start:0x00491750 end:0x004917C0
+
+Black/Bank_4917c0.cpp:
+	.text       start:0x004917C0 end:0x004918D0
+
+Black/Tile_4c5e50.cpp:
+	.text       start:0x004C5E50 end:0x004C5F50
+
+Black/Bank_4c5fe0.cpp:
+	.text       start:0x004C5FE0 end:0x004C81D0
+
+Black/Bank_4d0370.cpp:
+	.text       start:0x004D0370 end:0x004D0390
+
+Black/Bank_4d1b20.cpp:
+	.text       start:0x004D1B20 end:0x004D3600
+
+Black/Tile_4dd260.cpp:
+	.text       start:0x004DD260 end:0x004DD2C0
+
+Black/Bank_4dd2c0.cpp:
+	.text       start:0x004DD2C0 end:0x004E03D0
+
+Black/Bank_4e2230.cpp:
+	.text       start:0x004E2230 end:0x004E9D20
+
+Black/Bank_4eabd0.cpp:
+	.text       start:0x004EABD0 end:0x004EABE0
+
+Black/Tile_4eedc0.cpp:
+	.text       start:0x004EEDC0 end:0x004EEE60
+
+Black/Tile_4eeed0.cpp:
+	.text       start:0x004EEED0 end:0x004EEF00
+
+Black/Bank_4ef040.cpp:
+	.text       start:0x004EF040 end:0x004F3A10
+
+Black/Bank_50a990.cpp:
+	.text       start:0x0050A990 end:0x0050CF30
+
+Black/Gen_50e380.cpp:
+	.text       start:0x0050E380 end:0x0050E3A0
+
+Black/Gen_50ebb0.cpp:
+	.text       start:0x0050EBB0 end:0x0050EBD0
+
+Black/Bank_510610.cpp:
+	.text       start:0x00510610 end:0x00511A20
+
+Black/Bank_5127b0.cpp:
+	.text       start:0x005127B0 end:0x00512BD0
+
+Black/Bank_513810.cpp:
+	.text       start:0x00513810 end:0x00513850
+
+Black/Tile_5149d0.cpp:
+	.text       start:0x005149D0 end:0x00514A00
+
+Black/Bank_514d70.cpp:
+	.text       start:0x00514D70 end:0x00514D80
+
+Black/Tile_514d80.cpp:
+	.text       start:0x00514D80 end:0x00514F45
+
+Black/Bank_515680.cpp:
+	.text       start:0x00515680 end:0x00515690
+
+Black/Bank_518690.cpp:
+	.text       start:0x00518690 end:0x00519360
+
+Black/Gen_519640.cpp:
+	.text       start:0x00519640 end:0x00519650
+
+Black/Tile_51f180.cpp:
+	.text       start:0x0051F180 end:0x0051F5C0
+
+Black/Tile_524d40.cpp:
+	.text       start:0x00524D40 end:0x00524DD0
+
+Black/Bank_524dd0.cpp:
+	.text       start:0x00524DD0 end:0x0052A340
+
+Black/Tile_52c2e0.cpp:
+	.text       start:0x0052C2E0 end:0x0052C330
+
+Black/Bank_52c330.cpp:
+	.text       start:0x0052C330 end:0x0053BD60
+
+Black/Gen_53bd60.cpp:
+	.text       start:0x0053BD60 end:0x0053BEA0
+
+Black/Tile_53ce70.cpp:
+	.text       start:0x0053CE70 end:0x0053E220
+
+Black/Bank_5453c0.cpp:
+	.text       start:0x005453C0 end:0x005453D0
+
+Black/Tile_54a350.cpp:
+	.text       start:0x0054A350 end:0x0054A450
+
+Black/Bank_54a450.cpp:
+	.text       start:0x0054A450 end:0x0054A470
+
+Black/Bank_54b830.cpp:
+	.text       start:0x0054B830 end:0x0054BFD0
+
+Black/GGame_54c180.cpp:
+	.text       start:0x0054C180 end:0x0054D840
+
+Black/Bank_552620.cpp:
+	.text       start:0x00552620 end:0x00552640
+
+Black/Tile_557220.cpp:
+	.text       start:0x00557220 end:0x00557240
+
+Black/Bank_5577b0.cpp:
+	.text       start:0x005577B0 end:0x00558050
+
+Black/Bank_55c7b0.cpp:
+	.text       start:0x0055C7B0 end:0x0055C820
+
+Black/Villager_55c970.cpp:
+	.text       start:0x0055C970 end:0x0055CB70
+
+Black/Bank_55cbd0.cpp:
+	.text       start:0x0055CBD0 end:0x00561BA0
+
+Black/Gen_561c10.cpp:
+	.text       start:0x00561C10 end:0x00561C30
+
+Black/Bank_564ac0.cpp:
+	.text       start:0x00564AC0 end:0x00564B00
+
+Black/Tile_564b00.cpp:
+	.text       start:0x00564B00 end:0x00564B30
+
+Black/Bank_56d960.cpp:
+	.text       start:0x0056D960 end:0x0056D980
+
+Black/Bank_56fbe0.cpp:
+	.text       start:0x0056FBE0 end:0x00571F50
+
+Black/Bank_580a10.cpp:
+	.text       start:0x00580A10 end:0x005961C0
+
+Black/Bank_5b0c10.cpp:
+	.text       start:0x005B0C10 end:0x005B0D00
+
+Black/Bank_5b7510.cpp:
+	.text       start:0x005B7510 end:0x005B7520
+
+Black/Bank_5c20e0.cpp:
+	.text       start:0x005C20E0 end:0x005C82A0
+
+Black/Tile_5c99e0.cpp:
+	.text       start:0x005C99E0 end:0x005C9A40
+
+Black/Bank_5c9a40.cpp:
+	.text       start:0x005C9A40 end:0x005C9A60
+
+Black/Tile_5cad90.cpp:
+	.text       start:0x005CAD90 end:0x005CADC0
+
+Black/Bank_5cd150.cpp:
+	.text       start:0x005CD150 end:0x005DB990
+
+Black/Tile_5db990.cpp:
+	.text       start:0x005DB990 end:0x005DB9C0
+
+Black/Tile_5dc8b0.cpp:
+	.text       start:0x005DC8B0 end:0x005DC8D0
+
+Black/Tile_5e16c0.cpp:
+	.text       start:0x005E16C0 end:0x005E1720
+
+Black/Bank_5e1720.cpp:
+	.text       start:0x005E1720 end:0x005E1740
+
+Black/Bank_5e6770.cpp:
+	.text       start:0x005E6770 end:0x005E7660
+
+Black/Bank_5ec3e0.cpp:
+	.text       start:0x005EC3E0 end:0x005EF350
+
+Black/Bank_5eff30.cpp:
+	.text       start:0x005EFF30 end:0x005EFF40
+
+Black/Bank_5f04d0.cpp:
+	.text       start:0x005F04D0 end:0x005F04E0
+
+Black/Bank_5f15b0.cpp:
+	.text       start:0x005F15B0 end:0x005F2720
+
+Black/Bank_5fa970.cpp:
+	.text       start:0x005FA970 end:0x005FB2C0
+
+Black/Tile_5fb900.cpp:
+	.text       start:0x005FB900 end:0x005FB980
+
+Black/Bank_5fb980.cpp:
+	.text       start:0x005FB980 end:0x006010F0
+
+Black/Gen_607dc0.cpp:
+	.text       start:0x00607DC0 end:0x00607E10
+
+Black/Gen_6082d0.cpp:
+	.text       start:0x006082D0 end:0x006082F0
+
+Black/Gen_608340.cpp:
+	.text       start:0x00608340 end:0x00608350
+
+Black/Gen_608350.cpp:
+	.text       start:0x00608350 end:0x00608360
+
+Black/Gen_6083c0.cpp:
+	.text       start:0x006083C0 end:0x006083E0
+
+Black/Bank_628e20.cpp:
+	.text       start:0x00628E20 end:0x00628E30
+
+Black/Tile_62a630.cpp:
+	.text       start:0x0062A630 end:0x0062AC00
+
+Black/Tile_62b030.cpp:
+	.text       start:0x0062B030 end:0x0062B350
+
+Black/Gen_62dab0.cpp:
+	.text       start:0x0062DAB0 end:0x0062DAD0
+
+Black/Bank_62e740.cpp:
+	.text       start:0x0062E740 end:0x0062E750
+
+Black/Tile_62e750.cpp:
+	.text       start:0x0062E750 end:0x0062E760
+
+Black/Tile_62f650.cpp:
+	.text       start:0x0062F650 end:0x0062F8D0
+
+Black/Tile_630610.cpp:
+	.text       start:0x00630610 end:0x00631050
+
+Black/Bank_633610.cpp:
+	.text       start:0x00633610 end:0x0063A230
+
+Black/Bank_63a7b0.cpp:
+	.text       start:0x0063A7B0 end:0x0063AAE0
+
+Black/Bank_63e070.cpp:
+	.text       start:0x0063E070 end:0x0063E970
+
+Black/Tile_63e980.cpp:
+	.text       start:0x0063E980 end:0x0063EB00
+
+Black/Bank_6438e0.cpp:
+	.text       start:0x006438E0 end:0x006438F0
+
+Black/Gen_643960.cpp:
+	.text       start:0x00643960 end:0x00643970
+
+Black/Tile_643980.cpp:
+	.text       start:0x00643980 end:0x006439C0
+
+Black/Gen_643fd0.cpp:
+	.text       start:0x00643FD0 end:0x00644030
+
+Black/Bank_648940.cpp:
+	.text       start:0x00648940 end:0x0064B680
+
+Black/Gen_6587b0.cpp:
+	.text       start:0x006587B0 end:0x006587C0
+
+Black/Tile_66c2d0.cpp:
+	.text       start:0x0066C2D0 end:0x0066C3E0
+
+Black/Gen_66c3e0.cpp:
+	.text       start:0x0066C3E0 end:0x0066C3F0
+
+Black/Tile_66cbd0.cpp:
+	.text       start:0x0066CBD0 end:0x0066CC40
+
+Black/Bank_66cc40.cpp:
+	.text       start:0x0066CC40 end:0x0066CC70
+
+Black/Bank_66cec0.cpp:
+	.text       start:0x0066CEC0 end:0x006708C0
+
+Black/Tile_6708c0.cpp:
+	.text       start:0x006708C0 end:0x00670940
+
+Black/Gen_670940.cpp:
+	.text       start:0x00670940 end:0x00670950
+
+Black/Gen_670980.cpp:
+	.text       start:0x00670980 end:0x006709A0
+
+Black/Gen_6709a0.cpp:
+	.text       start:0x006709A0 end:0x00670A10
+
+Black/Bank_672c90.cpp:
+	.text       start:0x00672C90 end:0x006735D0
+
+Black/Gen_6739d0.cpp:
+	.text       start:0x006739D0 end:0x006739F0
+
+Black/Tile_6828a0.cpp:
+	.text       start:0x006828A0 end:0x00682950
+
+Black/Bank_682a40.cpp:
+	.text       start:0x00682A40 end:0x00682E4D
+
+Black/Tile_682f20.cpp:
+	.text       start:0x00682F20 end:0x00682F30
+
+Black/Gen_68ff00.cpp:
+	.text       start:0x0068FF00 end:0x0068FF20
+
+Black/Tile_6a9400.cpp:
+	.text       start:0x006A9400 end:0x006A9420
+
+Black/Gen_6b8090.cpp:
+	.text       start:0x006B8090 end:0x006B80A0
+
+Black/Gen_6c7530.cpp:
+	.text       start:0x006C7530 end:0x006C754A
+
+Black/Gen_6c75c0.cpp:
+	.text       start:0x006C75C0 end:0x006C75E0
+
+Black/Gen_6c7800.cpp:
+	.text       start:0x006C7800 end:0x006C7820
+
+Black/Bank_6c7a50.cpp:
+	.text       start:0x006C7A50 end:0x006C7A60
+
+Black/Gen_6c7ec0.cpp:
+	.text       start:0x006C7EC0 end:0x006C7ED0
+
+Black/Gen_6c8120.cpp:
+	.text       start:0x006C8120 end:0x006C8130
+
+Black/Tile_6c8580.cpp:
+	.text       start:0x006C8580 end:0x006C8590
+
+Black/Bank_6c87f0.cpp:
+	.text       start:0x006C87F0 end:0x006D0F50
+
+Black/Gen_6da960.cpp:
+	.text       start:0x006DA960 end:0x006DA970
+
+Black/Gen_6db110.cpp:
+	.text       start:0x006DB110 end:0x006DB140
+
+Black/Gen_6dc550.cpp:
+	.text       start:0x006DC550 end:0x006DC980
+
+Black/Gen_6dd4b0.cpp:
+	.text       start:0x006DD4B0 end:0x006DD520
+
+Black/Gen_6dd520.cpp:
+	.text       start:0x006DD520 end:0x006DD540
+
+Black/Gen_6dd5c0.cpp:
+	.text       start:0x006DD5C0 end:0x006DD5F0
+
+Black/Gen_6dd670.cpp:
+	.text       start:0x006DD670 end:0x006DD6A0
+
+Black/Gen_6dd720.cpp:
+	.text       start:0x006DD720 end:0x006DD750
+
+Black/Gen_6ddda0.cpp:
+	.text       start:0x006DDDA0 end:0x006DDDB0
+
+Black/Tile_6e0750.cpp:
+	.text       start:0x006E0750 end:0x006E07B0
+
+Black/Bank_6e07b0.cpp:
+	.text       start:0x006E07B0 end:0x006EAB70
+
+Black/Tile_6eab70.cpp:
+	.text       start:0x006EAB70 end:0x006EAB90
+
+Black/Tile_6eb100.cpp:
+	.text       start:0x006EB100 end:0x006EB1D0
+
+Black/Bank_6f62b0.cpp:
+	.text       start:0x006F62B0 end:0x006F62D0
+
+Black/Tile_709640.cpp:
+	.text       start:0x00709640 end:0x007096B0
+
+Black/Bank_7096b0.cpp:
+	.text       start:0x007096B0 end:0x0070AE60
+
+Black/Bank_70d960.cpp:
+	.text       start:0x0070D960 end:0x0070D970
+
+Black/Bank_711600.cpp:
+	.text       start:0x00711600 end:0x00711D80
+
+Black/Bank_715130.cpp:
+	.text       start:0x00715130 end:0x00715150
+
+Black/Tile_719a00.cpp:
+	.text       start:0x00719A00 end:0x00719A80
+
+Black/Bank_719a80.cpp:
+	.text       start:0x00719A80 end:0x0071BC30
+
+Black/Tile_71bc30.cpp:
+	.text       start:0x0071BC30 end:0x0071BE10
+
+Black/Bank_71be10.cpp:
+	.text       start:0x0071BE10 end:0x007260F0
+
+Black/SpellIcon_726350.cpp:
+	.text       start:0x00726350 end:0x00726360
+
+Black/Bank_726360.cpp:
+	.text       start:0x00726360 end:0x00727FC0
+
+Black/Tile_727fc0.cpp:
+	.text       start:0x00727FC0 end:0x00727FF0
+
+Black/Gen_728570.cpp:
+	.text       start:0x00728570 end:0x00728580
+
+Black/Bank_728660.cpp:
+	.text       start:0x00728660 end:0x00728F50
+
+Black/Tile_728f50.cpp:
+	.text       start:0x00728F50 end:0x00728F70
+
+Black/Bank_72a2d0.cpp:
+	.text       start:0x0072A2D0 end:0x0072E270
+
+Black/Bank_72eab0.cpp:
+	.text       start:0x0072EAB0 end:0x007352B0
+
+Black/Bank_7375c0.cpp:
+	.text       start:0x007375C0 end:0x00739350
+
+Black/Bank_73c940.cpp:
+	.text       start:0x0073C940 end:0x00746A30
+
+Black/Tile_74c8c0.cpp:
+	.text       start:0x0074C8C0 end:0x0074C920
+
+Black/Villager_74f900.cpp:
+	.text       start:0x0074F900 end:0x007528C0
+
+Black/Gen_754050.cpp:
+	.text       start:0x00754050 end:0x00754070
+
+Black/Villager_756450.cpp:
+	.text       start:0x00756450 end:0x00756B40
+
+Black/Villager_7630f0.cpp:
+	.text       start:0x007630F0 end:0x00764350
+
+Black/GameThingWithPos_768570.cpp:
+	.text       start:0x00768570 end:0x00769620
+
+Black/Gen_76e970.cpp:
+	.text       start:0x0076E970 end:0x0076E980
+
+Black/Gen_76f7c0.cpp:
+	.text       start:0x0076F7C0 end:0x0076F7D0
+
+Black/Tile_770dd0.cpp:
+	.text       start:0x00770DD0 end:0x00770F40
+
+Black/Tile_770f80.cpp:
+	.text       start:0x00770F80 end:0x00771020
+
+Black/Tile_7742e0.cpp:
+	.text       start:0x007742E0 end:0x00774580
+
+Black/Gen_779070.cpp:
+	.text       start:0x00779070 end:0x00779080
+
+Black/Bank_7792c0.cpp:
+	.text       start:0x007792C0 end:0x0077D040
+
+Black/Tile_77d2e0.cpp:
+	.text       start:0x0077D2E0 end:0x0077DAF0
+
+Black/Bank_77daf0.cpp:
+	.text       start:0x0077DAF0 end:0x0077F230
+
+Black/Bank_7807a0.cpp:
+	.text       start:0x007807A0 end:0x00780F10
+
+Black/Gen_7854c0.cpp:
+	.text       start:0x007854C0 end:0x007854D0
+
+Black/Bank_789e00.cpp:
+	.text       start:0x00789E00 end:0x00789E10
+
+Black/Bank_78d810.cpp:
+	.text       start:0x0078D810 end:0x0078D860
+
+Black/Gen_78dcd0.cpp:
+	.text       start:0x0078DCD0 end:0x0078DCE0
+
+Black/Gen_78de60.cpp:
+	.text       start:0x0078DE60 end:0x0078DE70
+
+Black/Gen_78dff0.cpp:
+	.text       start:0x0078DFF0 end:0x0078E000
+
+Black/Gen_78e040.cpp:
+	.text       start:0x0078E040 end:0x0078E080
+
+Black/Gen_78e1f0.cpp:
+	.text       start:0x0078E1F0 end:0x0078E200
+
+Black/Gen_78e3c0.cpp:
+	.text       start:0x0078E3C0 end:0x0078E3D0
+
+Black/Gen_78e750.cpp:
+	.text       start:0x0078E750 end:0x0078E760
+
+Black/Gen_78e850.cpp:
+	.text       start:0x0078E850 end:0x0078E870
+
+Black/Bank_7974d0.cpp:
+	.text       start:0x007974D0 end:0x007974F0
+
+Black/crt_merge_007aee98.cpp:
+	.text       start:0x007AEE98 end:0x007AEF54
+
+Black/crt_merge_007c5604.cpp:
+	.text       start:0x007C5604 end:0x007C5664
+
+Black/crt_merge_007c5ec0.cpp:
+	.text       start:0x007C5EC0 end:0x007C8CF0
+
+Black/strcspn.cpp:
+	.text       start:0x007C8CF0 end:0x007C8D30
+
+Black/memchr.cpp:
+	.text       start:0x007C8D30 end:0x007C8DD5
+
+Black/crt_merge_007c90a0.cpp:
+	.text       start:0x007C90A0 end:0x007CC6BA
+
+Black/crt_merge_007cc974.cpp:
+	.text       start:0x007CC974 end:0x007CDB24
+
+Black/crt_merge_007ce318.cpp:
+	.text       start:0x007CE318 end:0x007D5DB5
+
+Black/crt_merge_007d6354.cpp:
+	.text       start:0x007D6354 end:0x007DB410
+
+Black/Bank_7e6d10.cpp:
+	.text       start:0x007E6D10 end:0x007E6D30
+
+Black/crt_merge_008a5b0c.cpp:
+	.text       start:0x008A5B0C end:0x008A6460

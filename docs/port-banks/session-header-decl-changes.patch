@@ -1,0 +1,275 @@
+diff --git a/black/BWLan.h b/black/BWLan.h
+index 79db8010..23892d06 100644
+--- a/black/BWLan.h
++++ b/black/BWLan.h
+@@ -42,7 +42,7 @@ public:
+     // win1.41 00440830 mac 1017feb0 BWLan::Process(void)
+     virtual void Process();
+     // win1.41 00441380 mac 101804a0 BWLan::InitialiseLobbyState(void)
+-    virtual void InitialiseLobbyState();
++    virtual bool InitialiseLobbyState();
+     // win1.41 00441500 mac 10180020 BWLan::CreateOrJoinRoom(wchar_t *, wchar_t *, MPFEChannelDetails *)
+     virtual void CreateOrJoinRoom(wchar_t* param_1, wchar_t* param_2, MPFEChannelDetails* param_3);
+     // win1.41 004415b0 mac 1017fff0 BWLan::StartGame(void)
+@@ -92,7 +92,7 @@ void __fastcall PopulateChannelPlayers__5BWLanFP18MPFEChannelDetails(struct Laye
+ // win1.41 00440830 mac 1017feb0 BWLan::Process(void)
+ void __fastcall Process__5BWLanFv(struct LayerCommunication* this) asm("?Process@BWLan@@UAEXXZ");
+ // win1.41 00441380 mac 101804a0 BWLan::InitialiseLobbyState(void)
+-void __fastcall InitialiseLobbyState__5BWLanFv(struct LayerCommunication* this) asm("?InitialiseLobbyState@BWLan@@UAEXXZ");
++bool __fastcall InitialiseLobbyState__5BWLanFv(struct LayerCommunication* this) asm("?InitialiseLobbyState@BWLan@@UAE_NXZ");
+ // win1.41 00441500 mac 10180020 BWLan::CreateOrJoinRoom(wchar_t *, wchar_t *, MPFEChannelDetails *)
+ void __fastcall CreateOrJoinRoom__5BWLanFPwPwP18MPFEChannelDetails(struct LayerCommunication* this, const void* edx, wchar_t* param_1, wchar_t* param_2, struct MPFEChannelDetails* param_3) asm("?CreateOrJoinRoom@BWLan@@UAEXPA_W0PAUMPFEChannelDetails@@@Z");
+ // win1.41 004415b0 mac 1017fff0 BWLan::StartGame(void)
+diff --git a/black/GameThing.h b/black/GameThing.h
+index 8c758265..147573ae 100644
+--- a/black/GameThing.h
++++ b/black/GameThing.h
+@@ -61,6 +61,8 @@ public:
+     virtual float CalculateInfluence(const MapCoords& param_1);
+     // win1.41 00401800 mac 10494700 GameThing::RemoveDance(void)
+     virtual void RemoveDance();
++    // win1.41 00728f70 - undecompiled helper, promoted (promote_fn.py) to a callable method
++    bool32_t Func728F70();
+     // win1.41 00401810 mac 100512d0 GameThing::IsAvailable(void)
+     virtual bool32_t IsAvailable();
+     // win1.41 00401820 mac 10494880 GameThing::IsCreature(Creature *)
+diff --git a/black/MagicVortex.h b/black/MagicVortex.h
+index b4621399..ae41e3fd 100644
+--- a/black/MagicVortex.h
++++ b/black/MagicVortex.h
+@@ -110,7 +110,7 @@ public:
+     // win1.41 005fd8c0 mac 103b8720 LandscapeVortexIn::InteractsWithPhysicsObjects(void)
+     virtual bool32_t InteractsWithPhysicsObjects();
+     // win1.41 005fd8d0 mac 103b86b0 LandscapeVortexIn::ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object *)
+-    virtual void ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object* param_1);
++    virtual bool ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object* param_1);
+     // win1.41 005fd8e0 mac 103b8590 LandscapeVortexIn::ReactToPhysicsImpact(PhysicsObject *, bool)
+     virtual void ReactToPhysicsImpact(PhysicsObject* param_1, bool param_2);
+     // win1.41 005fd980 mac 103b84a0 LandscapeVortexIn::CreatureMustAvoid(Creature *)
+@@ -366,7 +366,7 @@ uint32_t __fastcall GetPhysicsConstantsType__17LandscapeVortexInFv(struct Object
+ // win1.41 005fd8c0 mac 103b8720 LandscapeVortexIn::InteractsWithPhysicsObjects(void)
+ bool __fastcall InteractsWithPhysicsObjects__17LandscapeVortexInFv(struct Object* this) asm("?InteractsWithPhysicsObjects@LandscapeVortexIn@@UAEIXZ");
+ // win1.41 005fd8d0 mac 103b86b0 LandscapeVortexIn::ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object *)
+-void __fastcall ShouldPhysicsRaiseObjectUntilNotIntersectingThis__17LandscapeVortexInFP6Object(struct Object* this, const void* edx, struct Object* param_1) asm("?ShouldPhysicsRaiseObjectUntilNotIntersectingThis@LandscapeVortexIn@@UAEXPAVObject@@@Z");
++bool __fastcall ShouldPhysicsRaiseObjectUntilNotIntersectingThis__17LandscapeVortexInFP6Object(struct Object* this, const void* edx, struct Object* param_1) asm("?ShouldPhysicsRaiseObjectUntilNotIntersectingThis@LandscapeVortexIn@@UAE_NPAVObject@@@Z");
+ // win1.41 005fd8e0 mac 103b8590 LandscapeVortexIn::ReactToPhysicsImpact(PhysicsObject *, bool)
+ void __fastcall ReactToPhysicsImpact__17LandscapeVortexInFP13PhysicsObjectb(struct Object* this, const void* edx, struct PhysicsObject* param_1, bool param_2) asm("?ReactToPhysicsImpact@LandscapeVortexIn@@UAEXPAVPhysicsObject@@_N@Z");
+ // win1.41 005fd980 mac 103b84a0 LandscapeVortexIn::CreatureMustAvoid(Creature *)
+diff --git a/black/MapShield.h b/black/MapShield.h
+index 824c5b54..a23e65a2 100644
+--- a/black/MapShield.h
++++ b/black/MapShield.h
+@@ -65,7 +65,7 @@ public:
+     // win1.41 0072c000 mac 10533fc0 MapShield::ValidForPlaceInHand(GInterfaceStatus *)
+     virtual bool32_t ValidForPlaceInHand(GInterfaceStatus* param_1);
+     // win1.41 0072c1e0 mac 10531620 MapShield::ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object *)
+-    virtual void ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object* param_1);
++    virtual bool ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object* param_1);
+     // win1.41 0072c1d0 mac 10531680 MapShield::CanBecomeAPhysicsObject(void)
+     virtual bool32_t CanBecomeAPhysicsObject();
+     // win1.41 0072c170 mac 10531740 MapShield::CreatureMustAvoid(Creature *)
+@@ -163,7 +163,7 @@ float __fastcall GetTopPos__9MapShieldFv(struct Object* this) asm("?GetTopPos@Ma
+ // win1.41 0072c000 mac 10533fc0 MapShield::ValidForPlaceInHand(GInterfaceStatus *)
+ uint32_t __fastcall ValidForPlaceInHand__9MapShieldFP16GInterfaceStatus(struct Object* this, const void* edx, struct GInterfaceStatus* param_1) asm("?ValidForPlaceInHand@MapShield@@UAEIPAVGInterfaceStatus@@@Z");
+ // win1.41 0072c1e0 mac 10531620 MapShield::ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object *)
+-void __fastcall ShouldPhysicsRaiseObjectUntilNotIntersectingThis__9MapShieldFP6Object(struct Object* this, const void* edx, struct Object* param_1) asm("?ShouldPhysicsRaiseObjectUntilNotIntersectingThis@MapShield@@UAEXPAVObject@@@Z");
++bool __fastcall ShouldPhysicsRaiseObjectUntilNotIntersectingThis__9MapShieldFP6Object(struct Object* this, const void* edx, struct Object* param_1) asm("?ShouldPhysicsRaiseObjectUntilNotIntersectingThis@MapShield@@UAE_NPAVObject@@@Z");
+ // win1.41 0072c1d0 mac 10531680 MapShield::CanBecomeAPhysicsObject(void)
+ bool __fastcall CanBecomeAPhysicsObject__9MapShieldFv(struct Object* this) asm("?CanBecomeAPhysicsObject@MapShield@@UAEIXZ");
+ // win1.41 0072c170 mac 10531740 MapShield::CreatureMustAvoid(Creature *)
+diff --git a/black/Object.h b/black/Object.h
+index a6a67916..175eccb8 100644
+--- a/black/Object.h
++++ b/black/Object.h
+@@ -538,7 +538,7 @@ public:
+     // win1.41 00419890 mac 100a9e80 Object::ChecksVerticesVObjects(void)
+     virtual bool32_t ChecksVerticesVObjects(); /* 0x7a0 */
+     // win1.41 006377d0 mac 103d6e50 Object::ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object *)
+-    virtual void ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object* param_1);
++    virtual bool ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object* param_1);
+     // win1.41 00402a00 mac 100b06b0 Object::PhysicallyDestroysAbodes(void)
+     virtual bool32_t PhysicallyDestroysAbodes();
+     // win1.41 006377c0 mac 103d6ee0 Object::ReactToPhysicsImpact(PhysicsObject *, bool)
+@@ -1438,7 +1438,7 @@ bool __fastcall InteractsWithPhysicsObjects__6ObjectFv(struct Object* this) asm(
+ // win1.41 00419890 mac 100a9e80 Object::ChecksVerticesVObjects(void)
+ uint32_t __fastcall ChecksVerticesVObjects__6ObjectFv(struct Object* this) asm("?ChecksVerticesVObjects@Object@@UAEIXZ");
+ // win1.41 006377d0 mac 103d6e50 Object::ShouldPhysicsRaiseObjectUntilNotIntersectingThis(Object *)
+-void __fastcall ShouldPhysicsRaiseObjectUntilNotIntersectingThis__6ObjectFP6Object(struct Object* this, const void* edx, struct Object* param_1) asm("?ShouldPhysicsRaiseObjectUntilNotIntersectingThis@Object@@UAEXPAV1@@Z");
++bool __fastcall ShouldPhysicsRaiseObjectUntilNotIntersectingThis__6ObjectFP6Object(struct Object* this, const void* edx, struct Object* param_1) asm("?ShouldPhysicsRaiseObjectUntilNotIntersectingThis@Object@@UAE_NPAV1@@Z");
+ // win1.41 00402a00 mac 100b06b0 Object::PhysicallyDestroysAbodes(void)
+ uint32_t __fastcall PhysicallyDestroysAbodes__6ObjectFv(struct Object* this) asm("?PhysicallyDestroysAbodes@Object@@UAEIXZ");
+ // win1.41 006377c0 mac 103d6ee0 Object::ReactToPhysicsImpact(PhysicsObject *, bool)
+diff --git a/black/Spell.h b/black/Spell.h
+index 495b6f2d..5db30ed4 100644
+--- a/black/Spell.h
++++ b/black/Spell.h
+@@ -29,7 +29,7 @@ class Object;
+ struct PSysProcessInfo;
+ class Reaction;
+ struct SpellCastData;
+-struct SpellEventInfo;
++class SpellEventInfo;
+ class WorshipSite;
+ 
+ // win1.41 00be0300 mac inlined Spell::`RTTI Type Descriptor'
+@@ -141,7 +141,7 @@ public:
+     // win1.41 0055cd80 mac inlined Spell::GetSpellCastPos(MapCoords *)
+     virtual void GetSpellCastPos(MapCoords* param_1);
+     // win1.41 00721370 mac 10516a00 Spell::ProcessSpellSeed(void)
+-    virtual void ProcessSpellSeed(); /* 0x500 */
++    virtual bool32_t ProcessSpellSeed(); /* 0x500 */
+     // win1.41 00720130 mac 105190d0 Spell::GetParticleType(void)
+     virtual void GetParticleType();
+     // win1.41 00721360 mac 10516aa0 Spell::DrawSpellSeed(void)
+@@ -163,7 +163,9 @@ public:
+     // win1.41 00720710 mac 10518300 Spell::Process(void)
+     virtual uint32_t Process();
+     // win1.41 00720f40 mac 105172a0 Spell::SpellEvent(SpellEventInfo const &)
+-    virtual void SpellEvent(const SpellEventInfo& param_1);
++    virtual bool32_t SpellEvent(const SpellEventInfo& param_1);
++    // win1.41 00720c30 - undecompiled helper (promote_fn) for SpellEvent
++    bool32_t Func720C30(const SpellEventInfo& param_1);
+     // win1.41 0055ce40 mac 10280a00 Spell::CloseDown(void)
+     virtual void CloseDown(); /* 0x530 */
+     // win1.41 0071fe50 mac 10519200 Spell::InitWithPos(GameThing *, MapCoords const &, SpellCastData *, PSysProcessInfo const &)
+@@ -206,7 +208,7 @@ struct PSysProcessInfo;
+ struct Reaction;
+ struct Spell;
+ struct SpellCastData;
+-struct SpellEventInfo;
++class SpellEventInfo;
+ struct WorshipSite;
+ 
+ struct SpellVftable
+@@ -385,7 +387,7 @@ uint32_t __fastcall GetCreatureCastOn__5SpellFv(struct Spell* this) asm("?GetCre
+ // win1.41 00720710 mac 10518300 Spell::Process(void)
+ uint32_t __fastcall Process__5SpellFv(struct Spell* this) asm("?Process@Spell@@UAEIXZ");
+ // win1.41 00720f40 mac 105172a0 Spell::SpellEvent(SpellEventInfo const &)
+-void __fastcall SpellEvent__5SpellFRC14SpellEventInfo(struct Spell* this, const void* edx, const struct SpellEventInfo* param_1) asm("?SpellEvent@Spell@@UAEXABVSpellEventInfo@@@Z");
++bool32_t __fastcall SpellEvent__5SpellFRC14SpellEventInfo(struct Spell* this, const void* edx, const struct SpellEventInfo* param_1) asm("?SpellEvent@Spell@@UAEIABVSpellEventInfo@@@Z");
+ // win1.41 0055ce40 mac 10280a00 Spell::CloseDown(void)
+ void __fastcall CloseDown__5SpellFv(struct Spell* this) asm("?CloseDown@Spell@@UAEXXZ");
+ // win1.41 0071fe50 mac 10519200 Spell::InitWithPos(GameThing *, MapCoords const &, SpellCastData *, PSysProcessInfo const &)
+diff --git a/black/SpellCreature.h b/black/SpellCreature.h
+index 54c728bc..d9586a95 100644
+--- a/black/SpellCreature.h
++++ b/black/SpellCreature.h
+@@ -40,7 +40,7 @@ public:
+     // win1.41 00722220 mac 10519f70 SpellCreature::GetSaveType(void)
+     virtual uint32_t GetSaveType();
+     // win1.41 00722490 mac 1051a2e0 SpellCreature::ProcessSpellSeed(void)
+-    virtual void ProcessSpellSeed();
++    virtual bool32_t ProcessSpellSeed();
+     // win1.41 007222c0 mac 1051a7a0 SpellCreature::GetCreatureCastOn(void)
+     virtual uint32_t GetCreatureCastOn();
+     // win1.41 00722380 mac 1051a4c0 SpellCreature::Process(void)
+diff --git a/black/SpellForest.h b/black/SpellForest.h
+index 81ec03a7..d00cf88b 100644
+--- a/black/SpellForest.h
++++ b/black/SpellForest.h
+@@ -18,8 +18,7 @@ class GameThing;
+ struct MapCoords;
+ struct PSysProcessInfo;
+ struct SpellCastData;
+-struct SpellEventInfo;
+-
++class SpellEventInfo;
+ // win1.41 00bece90 mac inlined SpellForest::`RTTI Type Descriptor'
+ // win1.41 009ae740 mac inlined SpellForest::`RTTI Base Class Descriptor'
+ // win1.41 009ae758 mac inlined SpellForest::`RTTI Base Class Array'
+@@ -47,7 +46,7 @@ public:
+     // win1.41 007259c0 mac 10520820 SpellForest::Process(void)
+     virtual uint32_t Process();
+     // win1.41 00725830 mac 10520880 SpellForest::SpellEvent(SpellEventInfo const &)
+-    virtual void SpellEvent(const SpellEventInfo* param_1);
++    virtual bool32_t SpellEvent(const SpellEventInfo* param_1);
+     // win1.41 0055d1e0 mac 1051ff90 SpellForest::CloseDown(void)
+     virtual void CloseDown();
+     // win1.41 00725540 mac 10521300 SpellForest::InitWithPos(GameThing *, MapCoords const &, SpellCastData *, PSysProcessInfo const &)
+@@ -75,8 +74,7 @@ struct GameThing;
+ struct MapCoords;
+ struct PSysProcessInfo;
+ struct SpellCastData;
+-struct SpellEventInfo;
+-
++class SpellEventInfo;
+ struct SpellForest
+ {
+   struct Spell super;  /* 0x0 */
+@@ -116,7 +114,7 @@ void __fastcall HasEnoughChantsAndLifeForRecast__11SpellForestFv(struct Spell* t
+ // win1.41 007259c0 mac 10520820 SpellForest::Process(void)
+ uint32_t __fastcall Process__11SpellForestFv(struct Spell* this) asm("?Process@SpellForest@@UAEIXZ");
+ // win1.41 00725830 mac 10520880 SpellForest::SpellEvent(SpellEventInfo const &)
+-void __fastcall SpellEvent__11SpellForestFRC14SpellEventInfo(struct Spell* this, const void* edx, const struct SpellEventInfo* param_1) asm("?SpellEvent@SpellForest@@UAEXABVSpellEventInfo@@@Z");
++bool32_t __fastcall SpellEvent__11SpellForestFRC14SpellEventInfo(struct Spell* this, const void* edx, const struct SpellEventInfo* param_1) asm("?SpellEvent@SpellForest@@UAEIABVSpellEventInfo@@@Z");
+ // win1.41 0055d1e0 mac 1051ff90 SpellForest::CloseDown(void)
+ void __fastcall CloseDown__11SpellForestFv(struct Spell* this) asm("?CloseDown@SpellForest@@UAEXXZ");
+ // win1.41 00725540 mac 10521300 SpellForest::InitWithPos(GameThing *, MapCoords const &, SpellCastData *, PSysProcessInfo const &)
+diff --git a/black/SpellResource.h b/black/SpellResource.h
+index 6d178b43..ee86c900 100644
+--- a/black/SpellResource.h
++++ b/black/SpellResource.h
+@@ -15,8 +15,7 @@
+ class Base;
+ class GameOSFile;
+ class GameThing;
+-struct SpellEventInfo;
+-
++class SpellEventInfo;
+ // win1.41 00becdc8 mac inlined SpellResource::`RTTI Type Descriptor'
+ // win1.41 009ae2f8 mac inlined SpellResource::`RTTI Base Class Descriptor'
+ // win1.41 009ae310 mac inlined SpellResource::`RTTI Base Class Array'
+@@ -40,7 +39,7 @@ public:
+     // win1.41 00724c90 mac 1051fc70 SpellResource::HasEnoughChantsAndLifeForRecast(void)
+     virtual void HasEnoughChantsAndLifeForRecast();
+     // win1.41 00724d80 mac 1051f9d0 SpellResource::SpellEvent(SpellEventInfo const &)
+-    virtual void SpellEvent(const SpellEventInfo* param_1);
++    virtual bool32_t SpellEvent(const SpellEventInfo* param_1);
+     uint32_t field_0xec;
+ };
+ 
+@@ -51,8 +50,7 @@ public:
+ struct Base;
+ struct GameOSFile;
+ struct GameThing;
+-struct SpellEventInfo;
+-
++class SpellEventInfo;
+ struct SpellResource
+ {
+   struct Spell super;  /* 0x0 */
+@@ -86,7 +84,7 @@ uint32_t __fastcall GetSaveType__13SpellResourceFv(struct GameThing* this) asm("
+ // win1.41 00724c90 mac 1051fc70 SpellResource::HasEnoughChantsAndLifeForRecast(void)
+ void __fastcall HasEnoughChantsAndLifeForRecast__13SpellResourceFv(struct Spell* this) asm("?HasEnoughChantsAndLifeForRecast@SpellResource@@UAEXXZ");
+ // win1.41 00724d80 mac 1051f9d0 SpellResource::SpellEvent(SpellEventInfo const &)
+-void __fastcall SpellEvent__13SpellResourceFRC14SpellEventInfo(struct Spell* this, const void* edx, const struct SpellEventInfo* param_1) asm("?SpellEvent@SpellResource@@UAEXABVSpellEventInfo@@@Z");
++bool32_t __fastcall SpellEvent__13SpellResourceFRC14SpellEventInfo(struct Spell* this, const void* edx, const struct SpellEventInfo* param_1) asm("?SpellEvent@SpellResource@@UAEIABVSpellEventInfo@@@Z");
+ 
+ #endif // __cplusplus
+ 
+diff --git a/black/SpellWithObjects.h b/black/SpellWithObjects.h
+index 3c013a41..dd0d01dd 100644
+--- a/black/SpellWithObjects.h
++++ b/black/SpellWithObjects.h
+@@ -43,7 +43,7 @@ public:
+     // win1.41 0055cf60 mac 10519d90 SpellWithObjects::GetSaveType(void)
+     virtual uint32_t GetSaveType();
+     // win1.41 007212f0 mac 10516c10 SpellWithObjects::ProcessSpellSeed(void)
+-    virtual void ProcessSpellSeed();
++    virtual bool32_t ProcessSpellSeed();
+     // win1.41 00721290 mac 10516c70 SpellWithObjects::Process(void)
+     virtual uint32_t Process();
+     // win1.41 00721300 mac 10516b50 SpellWithObjects::CloseDown(void)
+diff --git a/black/TotemStatue.h b/black/TotemStatue.h
+index 4d0ba74f..c02e3a94 100644
+--- a/black/TotemStatue.h
++++ b/black/TotemStatue.h
+@@ -151,6 +151,8 @@ public:
+     float GetWorshipSpeed();
+     // win1.41 00738270 mac 10544b90 TotemStatue::SetWorshipPercentage(float)
+     void SetWorshipPercentage(float percentage);
++    // win1.41 007381c0 - undecompiled helper, promoted (promote_fn.py) to a callable method for AddToPlayer
++    void Sub7381C0();
+ };
+ 
+ #else // __cplusplus

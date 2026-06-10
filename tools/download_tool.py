@@ -148,7 +148,7 @@ def download(url, response, output) -> None:
                 dst = output / item.name
                 if not dst.exists():
                     shutil.move(str(item), str(dst))
-            bin_dir.rmdir()
+            shutil.rmtree(str(bin_dir), ignore_errors=True)  # robust vs leftover/duplicate files
         # Make all files executable
         for root, _, files in os.walk(output):
             for name in files:
@@ -170,6 +170,17 @@ def main() -> None:
 
     url = TOOLS[args.tool](args.tag)
     output = Path(args.output)
+
+    # Idempotency guard: if the tool is already provisioned, skip the (re-)download. The MSVC archive
+    # extracts cl.exe to the output dir root; a stale build edge can otherwise re-trigger the download,
+    # which crashes flattening a non-empty leftover bin/ dir. Touch the dir so ninja sees it fresh.
+    if output.is_dir() and (output / "cl.exe").exists():
+        print(f"{output}/cl.exe already present; skipping download.")
+        bin_dir = output / "bin"
+        if bin_dir.is_dir():
+            shutil.rmtree(str(bin_dir), ignore_errors=True)  # clear stale leftover so future edges are clean
+        output.touch(mode=0o755)
+        return
 
     print(f"Downloading {url} to {output}")
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
