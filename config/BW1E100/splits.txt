@@ -106,10 +106,6 @@ Black/VillagerHousewife.cpp:
 	.data       start:0x00B473B4 end:0x00B473D8
 	.bss        start:0x00CDAAB4 end:0x00CDAAB8
 
-Black/VillagerLeader.cpp:
-	.rdata      start:0x008D1AE4 end:0x008D1AF8
-	.bss        start:0x00CDAAB8 end:0x00CDAABC
-
 Black/villagernames.cpp:
 	.text       start:0x006F0FC0 end:0x006F18E0
 	.rdata      start:0x008D1AF8 end:0x008D1B00
@@ -357,15 +353,6 @@ lib/libcmt/xtoa.obj:
 lib/libcmt/_freebuf.obj:
 	.text       start:0x0073D294 end:0x0073D2BF align:1
 
-lib/libcmt/ctype.obj:
-	.data       start:0x00B50020 end:0x00B5022A align:1
-
-align_pad_00B5022A:
-	.data       start:0x00B5022A end:0x00B5022C align:1
-
-lib/libcmt/nlsdata1.obj:
-	.data       start:0x00B5022C end:0x00B50238 align:1
-
 lib/libcmt/util.obj:
 	.text       start:0x0073D2BF end:0x0073D403 align:1
 	.data       start:0x00B52358 end:0x00B52380
@@ -387,16 +374,6 @@ align_pad_0073DD2A:
 lib/libcmt/powhlp.obj:
 	.text       start:0x0073EE97 end:0x0073F02C align:1
 
-align_pad_00B5249C:
-	.data       start:0x00B5249C end:0x00B524A0 align:1
-
-lib/libcmt/timeset.obj:
-	.rdata      start:0x008D68A4 end:0x008D68E4 align:4
-	.data       start:0x00B524A0 end:0x00B52534 align:4
-
-lib_fragment_00B52534:
-	.data       start:0x00B52534 end:0x00B52538 align:1
-
 lib/libcmt/adj_fdiv.obj:
 	.text       start:0x0073F2A0 end:0x0074002B align:1
 	.data       start:0x00B525C0 end:0x00B52720 align:1
@@ -410,9 +387,6 @@ lib/libcmt/frame.obj:
 lib/libcmt/cfin.obj:
 	.text       start:0x007411C4 end:0x00741243 align:1
 
-lib_fragment_00B52720:
-	.data       start:0x00B52720 end:0x00B52860 align:1
-
 lib/libcmt/winput.obj:
 	.text       start:0x00741243 end:0x00741D6C align:1
 	.data       start:0x00B52860 end:0x00B52870 align:1
@@ -420,18 +394,12 @@ lib/libcmt/winput.obj:
 lib_fragment_00741D6C:
 	.text       start:0x00741D6C end:0x00741DB5 align:1
 
-lib/libcmt/crt0msg.obj:
-	.data       start:0x00B52870 end:0x00B52900 align:1
-
 lib/libcmt/winxfltr.obj:
 	.text       start:0x00742100 end:0x00742278 align:1
 	.data       start:0x00B52900 end:0x00B52988 align:1
 
 lib/libcmt/wincmdln.obj:
 	.text       start:0x00742278 end:0x007422D0 align:1
-
-lib/libcmt/nlsdata2.obj:
-	.bss        start:0x00D5B348 end:0x00D5B368
 
 lib/libcmt/a_env.obj:
 	.text       start:0x007425D6 end:0x00742708 align:1
@@ -467,6 +435,78 @@ lib/libcmt/crt0init.obj:
 	.CRT$XPZ    start:0x008F7584 end:0x008F7588 align:4
 	.CRT$XTA    start:0x008F7588 end:0x008F758C align:4
 	.CRT$XTZ    start:0x008F7590 end:0x008F7594 align:4
+align_pad_00B5249C:
+	.data       start:0x00B5249C end:0x00B524A0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x008D68A4 end:0x008D68E4 align:4
+	.data       start:0x00B524A0 end:0x00B52534 align:4
+
+lib_fragment_00B52534:
+	.data       start:0x00B52534 end:0x00B52538 align:1
+
+lib/libcmt/nlsdata2.obj:
+	.bss        start:0x00D5B348 end:0x00D5B368
+
+lib/libcmt/ctype.obj:
+	.data       start:0x00B50020 end:0x00B5022A align:1
+
+align_pad_00B5022A:
+	.data       start:0x00B5022A end:0x00B5022C align:1
+
+lib/libcmt/nlsdata1.obj:
+	.data       start:0x00B5022C end:0x00B50238 align:1
+
+align_pad_00B5249C:
+	.data       start:0x00B5249C end:0x00B524A0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x008D68A4 end:0x008D68E1 align:1
+	.data       start:0x00B524A0 end:0x00B52534 align:1
+
+lib_fragment_00B52534:
+	.data       start:0x00B52534 end:0x00B52538 align:1
+
+lib_fragment_00B52720:
+	.data       start:0x00B52720 end:0x00B52860 align:1
+
+lib/libcmt/crt0msg.obj:
+	.data       start:0x00B52870 end:0x00B52900 align:1
+
+lib/libcmt/rtti.obj:
+	.rdata      start:0x008D68E1 end:0x008D68E8 align:1
+
+Black/VillagerLeader.cpp:
+	.rdata      start:0x008D1AE4 end:0x008D1AF8
+	.bss        start:0x00CDAAB8 end:0x00CDAABC
+
+lib/libcmt/ctype.obj:
+	.data       start:0x00B50020 end:0x00B5022A align:1
+
+align_pad_00B5022A:
+	.data       start:0x00B5022A end:0x00B5022C align:1
+
+lib/libcmt/nlsdata1.obj:
+	.data       start:0x00B5022C end:0x00B50238 align:1
+
+align_pad_00B5249C:
+	.data       start:0x00B5249C end:0x00B524A0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x008D68A4 end:0x008D68E1 align:1
+	.data       start:0x00B524A0 end:0x00B52534 align:1
+
+lib_fragment_00B52534:
+	.data       start:0x00B52534 end:0x00B52538 align:1
+
+lib/libcmt/rtti.obj:
+	.rdata      start:0x008D68E1 end:0x008D68E8 align:1
+
+lib_fragment_00B52720:
+	.data       start:0x00B52720 end:0x00B52860 align:1
+
+lib/libcmt/crt0msg.obj:
+	.data       start:0x00B52870 end:0x00B52900 align:1
 
 lib/libcmt/days.obj:
 	.data       start:0x00B53144 end:0x00B531AC align:1

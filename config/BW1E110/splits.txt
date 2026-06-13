@@ -235,15 +235,6 @@ lib/libcmt/_freebuf.obj:
 lib/libcmt/ldexp.obj:
 	.text       start:0x007C0C07 end:0x007C0DED align:1
 
-lib/libcmt/ctype.obj:
-	.data       start:0x00C1C970 end:0x00C1CB7A align:1
-
-align_pad_00C1CB7A:
-	.data       start:0x00C1CB7A end:0x00C1CB7C align:1
-
-lib/libcmt/nlsdata1.obj:
-	.data       start:0x00C1CB7C end:0x00C1CB88 align:1
-
 lib/libcmt/util.obj:
 	.text       start:0x007C0DED end:0x007C0F95 align:1
 	.data       start:0x00C1ECA8 end:0x00C1ECD0
@@ -262,16 +253,6 @@ align_pad_007C19BA:
 lib/libcmt/powhlp.obj:
 	.text       start:0x007C2C07 end:0x007C2D9C align:1
 
-align_pad_00C1EDEC:
-	.data       start:0x00C1EDEC end:0x00C1EDF0 align:1
-
-lib/libcmt/timeset.obj:
-	.rdata      start:0x009909F4 end:0x00990A34 align:4
-	.data       start:0x00C1EDF0 end:0x00C1EE84 align:4
-
-lib/libcmt/strftime.obj:
-	.data       start:0x00C1EE84 end:0x00C1EE88 align:1
-
 lib/libcmt/adj_fdiv.obj:
 	.text       start:0x007C3010 end:0x007C3D9B align:1
 	.data       start:0x00C1EF10 end:0x00C1F070 align:1
@@ -285,9 +266,6 @@ lib/libcmt/frame.obj:
 lib/libcmt/cfin.obj:
 	.text       start:0x007C4FD4 end:0x007C5053 align:1
 
-lib_fragment_00C1F070:
-	.data       start:0x00C1F070 end:0x00C1F1B0 align:1
-
 lib/libcmt/winput.obj:
 	.text       start:0x007C5053 end:0x007C5B7C align:1
 	.data       start:0x00C1F1B0 end:0x00C1F1C0 align:1
@@ -295,18 +273,12 @@ lib/libcmt/winput.obj:
 lib_fragment_007C5B7C:
 	.text       start:0x007C5B7C end:0x007C5BC5 align:1
 
-lib/libcmt/crt0msg.obj:
-	.data       start:0x00C1F1C0 end:0x00C1F250 align:1
-
 lib/libcmt/winxfltr.obj:
 	.text       start:0x007C6370 end:0x007C64E8 align:1
 	.data       start:0x00C1F250 end:0x00C1F2D8 align:1
 
 lib/libcmt/wincmdln.obj:
 	.text       start:0x007C64E8 end:0x007C6540 align:1
-
-lib/libcmt/nlsdata2.obj:
-	.bss        start:0x00E72C60 end:0x00E72C80
 
 lib/libcmt/a_env.obj:
 	.text       start:0x007C6846 end:0x007C6978 align:1
@@ -357,6 +329,74 @@ lib/libcmt/crt0init.obj:
 	.CRT$XPZ    start:0x009B7620 end:0x009B7624 align:4
 	.CRT$XTA    start:0x009B7624 end:0x009B7628 align:4
 	.CRT$XTZ    start:0x009B762C end:0x009B7630 align:4
+align_pad_00C1EDEC:
+	.data       start:0x00C1EDEC end:0x00C1EDF0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x009909F4 end:0x00990A34 align:4
+	.data       start:0x00C1EDF0 end:0x00C1EE84 align:4
+
+lib/libcmt/strftime.obj:
+	.data       start:0x00C1EE84 end:0x00C1EE88 align:1
+
+lib/libcmt/nlsdata2.obj:
+	.bss        start:0x00E72C60 end:0x00E72C80
+
+lib/libcmt/ctype.obj:
+	.data       start:0x00C1C970 end:0x00C1CB7A align:1
+
+align_pad_00C1CB7A:
+	.data       start:0x00C1CB7A end:0x00C1CB7C align:1
+
+lib/libcmt/nlsdata1.obj:
+	.data       start:0x00C1CB7C end:0x00C1CB88 align:1
+
+align_pad_00C1EDEC:
+	.data       start:0x00C1EDEC end:0x00C1EDF0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x009909F4 end:0x00990A31 align:1
+	.data       start:0x00C1EDF0 end:0x00C1EE84 align:1
+
+lib/libcmt/strftime.obj:
+	.data       start:0x00C1EE84 end:0x00C1EE88 align:1
+
+lib_fragment_00C1F070:
+	.data       start:0x00C1F070 end:0x00C1F1B0 align:1
+
+lib/libcmt/crt0msg.obj:
+	.data       start:0x00C1F1C0 end:0x00C1F250 align:1
+
+lib/libcmt/rtti.obj:
+	.rdata      start:0x00990A31 end:0x00990A38 align:1
+
+lib/libcmt/ctype.obj:
+	.data       start:0x00C1C970 end:0x00C1CB7A align:1
+
+align_pad_00C1CB7A:
+	.data       start:0x00C1CB7A end:0x00C1CB7C align:1
+
+lib/libcmt/nlsdata1.obj:
+	.data       start:0x00C1CB7C end:0x00C1CB88 align:1
+
+align_pad_00C1EDEC:
+	.data       start:0x00C1EDEC end:0x00C1EDF0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x009909F4 end:0x00990A31 align:1
+	.data       start:0x00C1EDF0 end:0x00C1EE84 align:1
+
+lib/libcmt/strftime.obj:
+	.data       start:0x00C1EE84 end:0x00C1EE88 align:1
+
+lib/libcmt/rtti.obj:
+	.rdata      start:0x00990A31 end:0x00990A38 align:1
+
+lib_fragment_00C1F070:
+	.data       start:0x00C1F070 end:0x00C1F1B0 align:1
+
+lib/libcmt/crt0msg.obj:
+	.data       start:0x00C1F1C0 end:0x00C1F250 align:1
 
 lib/libcmt/days.obj:
 	.data       start:0x00C1FA94 end:0x00C1FAFC align:1
