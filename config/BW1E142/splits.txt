@@ -27,6 +27,8 @@ Black/Abode.cpp:
 	.rdata$r    start:0x009A62D8 end:0x009A6570
 	.data       start:0x009C7E80 end:0x009C8078
 
+Lionhead/LH3DLib/development/LHPoint.cpp:
+	.text       start:0x006115F0 end:0x00611610
 Black/CameraHelp.cpp:
 	.text       start:0x00448F20 end:0x00448F40
 
@@ -389,18 +391,6 @@ lib/libcmt/_freebuf.obj:
 lib/libcmt/ldexp.obj:
 	.text       start:0x007D0DF7 end:0x007D0FDD align:1
 
-auto_gap_00C2D668:
-	.data       start:0x00C2D668 end:0x00C2DB20 align:1
-
-lib/libcmt/ctype.obj:
-	.data       start:0x00C2DB20 end:0x00C2DD2A align:1
-
-align_pad_00C2DD2A:
-	.data       start:0x00C2DD2A end:0x00C2DD2C align:1
-
-lib/libcmt/nlsdata1.obj:
-	.data       start:0x00C2DD2C end:0x00C2DD38 align:1
-
 lib/libcmt/util.obj:
 	.text       start:0x007D0FDD end:0x007D1185 align:1
 	.data       start:0x00C2FE58 end:0x00C2FE80
@@ -419,16 +409,6 @@ align_pad_007D1BAA:
 lib/libcmt/powhlp.obj:
 	.text       start:0x007D2DF7 end:0x007D2F8C align:1
 
-align_pad_00C2FF9C:
-	.data       start:0x00C2FF9C end:0x00C2FFA0 align:1
-
-lib/libcmt/timeset.obj:
-	.rdata      start:0x009A0AF4 end:0x009A0B34 align:4
-	.data       start:0x00C2FFA0 end:0x00C30034 align:4
-
-lib_fragment_00C30034:
-	.data       start:0x00C30034 end:0x00C30038 align:1
-
 lib/libcmt/adj_fdiv.obj:
 	.text       start:0x007D3200 end:0x007D3F8B align:1
 	.data       start:0x00C300C0 end:0x00C30220 align:1
@@ -442,9 +422,6 @@ lib/libcmt/frame.obj:
 lib/libcmt/cfin.obj:
 	.text       start:0x007D51C4 end:0x007D5243 align:1
 
-lib_fragment_00C30220:
-	.data       start:0x00C30220 end:0x00C30360 align:1
-
 lib/libcmt/winput.obj:
 	.text       start:0x007D5243 end:0x007D5D6C align:1
 	.data       start:0x00C30360 end:0x00C30370 align:1
@@ -455,18 +432,12 @@ lib_fragment_007D5D6C:
 lib/libcmt/fseeki64.obj:
 	.text       start:0x007D675C end:0x007D681C align:1
 
-lib/libcmt/crt0msg.obj:
-	.data       start:0x00C30370 end:0x00C30400 align:1
-
 lib/libcmt/winxfltr.obj:
 	.text       start:0x007D68AF end:0x007D6A27 align:1
 	.data       start:0x00C30400 end:0x00C30488 align:1
 
 lib/libcmt/wincmdln.obj:
 	.text       start:0x007D6A27 end:0x007D6A7F align:1
-
-lib/libcmt/nlsdata2.obj:
-	.bss        start:0x00E84298 end:0x00E842B8
 
 lib/libcmt/a_env.obj:
 	.text       start:0x007D6D85 end:0x007D6EB7 align:1
@@ -514,6 +485,86 @@ lib/libcmt/crt0init.obj:
 	.CRT$XPZ    start:0x009C7E64 end:0x009C7E68 align:4
 	.CRT$XTA    start:0x009C7E68 end:0x009C7E6C align:4
 	.CRT$XTZ    start:0x009C7E70 end:0x009C7E74 align:4
+auto_gap_00C2D668:
+	.data       start:0x00C2D668 end:0x00C2DB20 align:1
+
+lib/libcmt/ctype.obj:
+	.data       start:0x00C2DB20 end:0x00C2DD2A align:1
+
+align_pad_00C2DD2A:
+	.data       start:0x00C2DD2A end:0x00C2DD2C align:1
+
+lib/libcmt/nlsdata1.obj:
+	.data       start:0x00C2DD2C end:0x00C2DD38 align:1
+
+align_pad_00C2FF9C:
+	.data       start:0x00C2FF9C end:0x00C2FFA0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x009A0AF4 end:0x009A0B34 align:4
+	.data       start:0x00C2FFA0 end:0x00C30034 align:4
+
+lib_fragment_00C30034:
+	.data       start:0x00C30034 end:0x00C30038 align:1
+
+lib/libcmt/nlsdata2.obj:
+	.bss        start:0x00E84298 end:0x00E842B8
+
+lib/libcmt/ctype.obj:
+	.data       start:0x00C2DB20 end:0x00C2DD2A align:1
+
+align_pad_00C2DD2A:
+	.data       start:0x00C2DD2A end:0x00C2DD2C align:1
+
+lib/libcmt/nlsdata1.obj:
+	.data       start:0x00C2DD2C end:0x00C2DD38 align:1
+
+align_pad_00C2FF9C:
+	.data       start:0x00C2FF9C end:0x00C2FFA0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x009A0AF4 end:0x009A0B31 align:1
+	.data       start:0x00C2FFA0 end:0x00C30034 align:1
+
+lib_fragment_00C30034:
+	.data       start:0x00C30034 end:0x00C30038 align:1
+
+lib_fragment_00C30220:
+	.data       start:0x00C30220 end:0x00C30360 align:1
+
+lib/libcmt/crt0msg.obj:
+	.data       start:0x00C30370 end:0x00C30400 align:1
+
+lib/libcmt/rtti.obj:
+	.rdata      start:0x009A0B31 end:0x009A0B38 align:1
+
+lib/libcmt/ctype.obj:
+	.data       start:0x00C2DB20 end:0x00C2DD2A align:1
+
+align_pad_00C2DD2A:
+	.data       start:0x00C2DD2A end:0x00C2DD2C align:1
+
+lib/libcmt/nlsdata1.obj:
+	.data       start:0x00C2DD2C end:0x00C2DD38 align:1
+
+align_pad_00C2FF9C:
+	.data       start:0x00C2FF9C end:0x00C2FFA0 align:1
+
+lib/libcmt/timeset.obj:
+	.rdata      start:0x009A0AF4 end:0x009A0B31 align:1
+	.data       start:0x00C2FFA0 end:0x00C30034 align:1
+
+lib_fragment_00C30034:
+	.data       start:0x00C30034 end:0x00C30038 align:1
+
+lib/libcmt/rtti.obj:
+	.rdata      start:0x009A0B31 end:0x009A0B38 align:1
+
+lib_fragment_00C30220:
+	.data       start:0x00C30220 end:0x00C30360 align:1
+
+lib/libcmt/crt0msg.obj:
+	.data       start:0x00C30370 end:0x00C30400 align:1
 
 lib/libcmt/days.obj:
 	.data       start:0x00C30C44 end:0x00C30CAC align:1

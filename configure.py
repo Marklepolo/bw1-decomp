@@ -648,6 +648,7 @@ config.libs = [
             Object(NonMatching, "Black/MPFEConditionMessages.cpp"),
             Object(NonMatching, "Black/MPFECondtionUpdateMessage.cpp"),
             Object(Matching, "Black/MPFEConnectionStatus.cpp"),
+            Object(MatchingFor("BW1E142"), "Lionhead/LH3DLib/development/LHPoint.cpp"),
             Object(NonMatching, "Black/MPFECreateGame.cpp"),
             Object(NonMatching, "Black/MPFEDatabaseID.cpp"),
             Object(NonMatching, "Black/MPFEDisconnectNowMessage.cpp"),
