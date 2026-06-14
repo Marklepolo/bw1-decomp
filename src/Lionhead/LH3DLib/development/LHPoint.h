@@ -21,18 +21,14 @@ struct Point2D
     Point2D* operator=(const Point2D* other);
     // win1.41 00611170 mac inlined Point2D::DotProduct(Point2D&)
     float DotProduct(const Point2D* other);
-    // win1.41 00611220 mac inlined Point2D::operator=(const Point2D&) copy
-    Point2D* operator=(const Point2D* other);
-    // win1.41 00611310 mac inlined Point2D::DotProduct(Point2D*)
-    float DotProduct(const Point2D* other);
     // win1.41 00611190 mac 10033740 Point2D::operator*(float) const
-    Point2D* operator*(Point2D* result, float rhs);
+    Point2D* operator*(float rhs);
     // win1.41 inlined mac 100a9540 Point2D::operator+( const(Point2D const &))
-    Point2D* operator+(const Point2D* lhs, const Point2D* rhs);
+    Point2D* operator+(const Point2D* rhs);
     // win1.41 inlined mac inlined Point2D::operator+=(Point2D const &)
     Point2D* operator+=(const Point2D* other);
     // win1.41 inlined mac 10088c10 Point2D::operator-( const(Point2D const &))
-    Point2D* operator-(const Point2D* lhs, const Point2D* rhs);
+    Point2D* operator-(const Point2D* rhs);
     // win1.41 inlined mac inlined Point2D::operator-=(Point2D const &)
     Point2D* operator-=(const Point2D* other);
     // win1.41 00611240 mac inlined Point2D::Cross(const Point2D&) const
@@ -40,8 +36,6 @@ struct Point2D
     // win1.41 00611330 mac 100e7550 Point2D::Normalize(void)
     float Normalize();
     // win1.41 006115f0 mac 1005ba40 Point2D::GetNormSq(void) const
-    float GetNormSq();
-    // win1.41 0086fda0 mac inlined Point2D::GetNormSq(void) const copy
     float GetNormSq();
     // win1.41 006159c0 mac inlined Point2D::operator==(const Point2D&)
     bool operator==(const Point2D* other);
@@ -75,9 +69,9 @@ struct LHPoint
     // win1.41 inlined mac inlined LHPoint::operator*=(float)
     LHPoint* operator*=(float rhs);
     // win1.41 inlined mac inlined LHPoint::operator+(LHPoint const &) const
-    LHPoint* operator+(const LHPoint* lhs, const LHPoint* rhs);
+    LHPoint* operator+(const LHPoint* rhs);
     // win1.41 inlined mac inlined LHPoint::operator-(LHPoint const &) const
-    LHPoint* operator-(const LHPoint* lhs, const LHPoint* rhs);
+    LHPoint* operator-(const LHPoint* rhs);
     // win1.41 inlined mac inlined LHPoint::GetNormSq(void)
     float GetNormSq();
     // win1.41 inlined mac inlined LHPoint::GetNorm(void)
